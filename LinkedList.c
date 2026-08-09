@@ -6,7 +6,7 @@ struct Node {
     struct Node *next;
 };
 
-// Insert node at the end
+
 void insertEnd(struct Node **head, int data)
 {
     struct Node *newNode = malloc(sizeof(struct Node));
@@ -27,7 +27,7 @@ void insertEnd(struct Node **head, int data)
     temp->next = newNode;
 }
 
-// Reverse linked list in-place
+
 void reverse(struct Node **head)
 {
     struct Node *prev = NULL;
@@ -35,16 +35,16 @@ void reverse(struct Node **head)
     struct Node *next = NULL;
 
     while (current != NULL) {
-        next = current->next;     // Save next node
-        current->next = prev;     // Reverse the link
-        prev = current;           // Move prev forward
-        current = next;           // Move current forward
+        next = current->next;    
+        current->next = prev;     
+        prev = current;           
+        current = next;           
     }
 
     *head = prev;
 }
 
-// Display linked list
+
 void display(struct Node *head)
 {
     while (head != NULL) {
